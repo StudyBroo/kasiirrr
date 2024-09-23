@@ -9,8 +9,8 @@
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon.png">
     <!-- Custom Stylesheet -->
-    <link href="/assets//plugins/tables/css/datatable/dataTables.bootstrap4.min.css" rel="stylesheet">
-    <link href=/assets/css/styl rel="stylesheet">
+    <link href="{{ asset('/assets//plugins/tables/css/datatable/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/assets/css/style.css') }}" rel="stylesheet">
 
 </head>
 

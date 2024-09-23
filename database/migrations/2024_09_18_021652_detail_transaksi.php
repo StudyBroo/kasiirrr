@@ -23,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tb_transaksi');
+        Schema::dropIfExists('tbl_detail_transaksi');
     }
 };
