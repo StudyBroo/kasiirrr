@@ -67,11 +67,47 @@
     <!--**********************************
         Scripts
     ***********************************-->
-    <script src="{{ asset('assets/plugins/common/common.min.js') }}"></script>
-    <script src="{{ asset('assets/js/custom.min.js') }}"></script>
-    <script src="{{ asset('assets/js/settings.js') }}"></script>
-    <script src="{{ asset('assets/js/gleek.js') }}"></script>
-    <script src="{{ asset('assets/js/styleSwitcher.js') }}"></script>
+    <script src="/assets/plugins/common/common.min.js') }}"></script>
+    <script src="/assets/js/custom.min.js') }}"></script>
+    <script src="/assets/js/settings.js') }}"></script>
+    <script src="/assets/js/gleek.js') }}"></script>
+    <script src="/assets/js/styleSwitcher.js') }}"></script>
+
+    <script src="/assets/js/sweetalert/aweetalert.main.js"></script>
+
+    @if (session('error'))
+    <script>
+        var sweetalert2Demo =function() {
+            var initDemos = function() {
+
+                swal({
+                    title: "{{ session('error') }}",
+                    text: "{{ session('error') }}",
+                    title: "error",
+                    button: {
+                        confirm: {
+                            text: "Confirm Me",
+                            value: true,
+                            visible: true,
+                            className: "btn btn-succsess",
+                            classModal: true
+                        }
+                    }
+                });
+            };
+
+        return {
+            init: function() {
+                initDemos();
+            },
+        };
+    }();
+
+    jQuery(document).ready(funtion() {
+        sweetalert2Demo.init();
+    })
+    </script>
+    @endif
 </body>
 </html>
 
